@@ -24,6 +24,18 @@ Each benchmark is executed with the following configuration:
 
 Computer: Macbook air M2
 
+```angular2html
+main summary:
+Benchmark                                      Mode  Cnt      Score      Error  Units
+c.g.a.b.complex.Avro4kV1Benchmark.read        thrpt    5   4972.208 ±  705.862  ops/s
+c.g.a.b.complex.Avro4kV1Benchmark.write       thrpt    5   3441.371 ±   28.823  ops/s
+c.g.a.b.lists.Avro4kV1ListsBenchmark.read     thrpt    5     42.143 ±    0.997  ops/s
+c.g.a.b.lists.Avro4kV1ListsBenchmark.write    thrpt    5     40.493 ±    2.051  ops/s
+c.g.a.b.simple.Avro4kV1SimpleBenchmark.read   thrpt    5  54174.035 ± 3654.468  ops/s
+c.g.a.b.simple.Avro4kV1SimpleBenchmark.write  thrpt    5  52706.461 ±  422.400  ops/s
+```
+
+
 ```
 Benchmark                                                       Mode  Cnt      Score      Error    Units  Relative Difference (%)
 c.g.a.b.complex.Avro4kBenchmark.read                           thrpt    5   23897.142 ±   565.722  ops/s    0.00%
