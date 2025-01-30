@@ -40,7 +40,7 @@ class BigDecimalSerializer : AvroSerializer<BigDecimal>() {
       // the scale and precision should come from the schema and the rounding mode from the implicit
 
       val converter = Conversions.DecimalConversion()
-      val rm = RoundingMode.UNNECESSARY
+      val rm = RoundingMode.HALF_DOWN
 
       return when (schema.type) {
          Schema.Type.STRING -> encoder.encodeString(obj.toString())
