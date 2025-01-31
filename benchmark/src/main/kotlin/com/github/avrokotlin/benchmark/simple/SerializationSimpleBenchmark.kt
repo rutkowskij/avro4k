@@ -11,17 +11,17 @@ import java.util.concurrent.TimeUnit
 @BenchmarkMode(Mode.Throughput)
 @Measurement(iterations = 5, time = 3, timeUnit = TimeUnit.SECONDS)
 internal abstract class SerializationSimpleBenchmark {
-    lateinit var clients: SimpleDatasClass
-    val schema = Avro.default.schema(SimpleDatasClass.serializer())
+   lateinit var clients: SimpleDatasClass
+   val schema = Avro.default.schema(SimpleDatasClass.serializer())
 
-    @Setup
-    fun initTestData() {
-        setup()
-        clients = SimpleDatasClass.create(25)
-        prepareBinaryData()
-    }
+   @Setup
+   fun initTestData() {
+      setup()
+      clients = SimpleDatasClass.create(25)
+      prepareBinaryData()
+   }
 
-    abstract fun setup()
+   abstract fun setup()
 
-    abstract fun prepareBinaryData()
+   abstract fun prepareBinaryData()
 }
